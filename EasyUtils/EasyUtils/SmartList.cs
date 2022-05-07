@@ -32,6 +32,16 @@ namespace EasyUtils
             AppendAtEnd(new T[] { value });
         }
 
+        public void AppendAtEnd(T[] value_buffer,int len)
+        {
+            T[] input = new T[len];
+            for(int i = 0; i < len; i++)
+            {
+                input[i] = value_buffer[i];
+            }
+            AppendAtEnd(input);
+        }
+
         public void AppendAtEnd(T[] values)
         {
             if (m_State == SmartListState.IDEL)
